@@ -1,14 +1,18 @@
 <template>
-<div>
-<div 
- v-for="(item,index) in cardList" :key="index" :img="item.poster" :name="index.author" :type="index.genre" :album="index.title" :age="index.year"></div>
+<main>
+<div class="container">
+ <DischiContent v-for="(item,index) in cardList" :key="index" :img="item.poster" :name="item.author" :type="item.genre" :album="item.title" :age="item.year"/>
 </div>
-    
+ </main>
 </template>
 <script>
 import axios from 'axios';
+import DischiContent from './DischiContent.vue';
 export default {
- name:'DischiContent',
+ name:'MainContent',
+  components: {
+    DischiContent
+  },
  data(){
     return{
         cardList:[],
@@ -29,7 +33,9 @@ export default {
 <style>
 main{
   background-color: rgb(24, 23, 23);
-  width: 100%;
-  height:100vh;
+  width: 100%; 
+}
+.container{
+ 
 }
 </style>

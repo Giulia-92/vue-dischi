@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <HeaderContent/>
     <MainContent />
   </div>
   
@@ -8,12 +9,12 @@
 <script>
 
 import MainContent from './components/MainContent.vue'
-
+import HeaderContent from './components/HeaderContent.vue'
 export default {
   name: 'App',
   components: {
-    
-    MainContent
+    HeaderContent,
+    MainContent,
   }
 }
 </script>
