@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <DischiContent/>
+    <MainContent />
   </div>
   
 </template>
 
 <script>
-import DischiContent from './components/DischiContent.vue'
+
+import MainContent from './components/MainContent.vue'
 
 export default {
   name: 'App',
   components: {
-    DischiContent
+    
+    MainContent
   }
 }
 </script>
