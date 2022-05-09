@@ -20,7 +20,8 @@ export default {
   },
  data(){
     return{
-        cardList:[],
+      SearchText:'',
+      cardList:[],
       apiPath:'https://flynn.boolean.careers/exercises/api/array/music'
     }
   },
@@ -28,12 +29,17 @@ export default {
     setSearchText(txt){
       this.SearchText = txt;
     }
+    
   },
   computed:{
     filteredList(){
-      if(this.searchText === ''){
+      if(this.SearchText !== ''){
         return this.characterList.filter((el)=>el.name.toLowercase().includes(this.searchText.toLowercase()))
+      }else{
+        return this.characterList
+        
       }
+      
     }
   },
   created(){

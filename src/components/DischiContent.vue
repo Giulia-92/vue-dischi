@@ -1,5 +1,5 @@
 <template>
-<div class="card" style="width: 18rem;">
+<div class="card mt-5" style="width: 18rem;">
   <img :src="img" class="card-img-top" :alt="name">
   <div class="card-body">
     <h1 class="card-title text center fw bold my-5">{{name}}</h1>

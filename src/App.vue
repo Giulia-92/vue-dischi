@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <HeaderContent/>
+    <SearchBar/>
     <MainContent />
   </div>
   
