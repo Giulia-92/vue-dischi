@@ -1,5 +1,8 @@
 <template>
-    <div>{{name}} - {{type}} -{{album}} -{{age}}
+    <div>{{name}} -
+       {{type}} -
+       {{album}} -
+       {{age}}
    <img :src="img" :alt="name">
     </div>
    

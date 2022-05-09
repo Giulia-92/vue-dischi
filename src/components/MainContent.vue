@@ -36,6 +36,9 @@ main{
   width: 100%; 
 }
 .container{
- 
+ display:flex;
+ flex-wrap: wrap;
+ color: white;
+ font-family: Arial, Helvetica, sans-serif;
 }
 </style>
