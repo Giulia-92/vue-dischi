@@ -1,11 +1,14 @@
 <template>
-    <div>{{name}} -
-       {{type}} -
-       {{album}} -
-       {{age}}
-   <img :src="img" :alt="name">
-    </div>
-   
+<div class="card" style="width: 18rem;">
+  <img :src="img" class="card-img-top" :alt="name">
+  <div class="card-body">
+    <h1 class="card-title text center fw bold my-5">{{name}}</h1>
+    <p class="card-text">
+      {{type}} 
+       {{album}} 
+       {{age}}</p>
+  </div>
+</div>
 </template>
 <script>
 export default {
@@ -20,3 +23,12 @@ export default {
   }
 }
 </script>
+<style scoped>
+.card{
+  background-color: rgb(48, 48, 48);
+  margin-top:2em;
+  margin-right:1em;
+  border-radius:10px;
+  font-family:'Roboto Condensed',;
+}
+</style>

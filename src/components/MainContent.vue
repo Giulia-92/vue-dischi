@@ -1,8 +1,9 @@
 <template>
 <main>
 <div class="container">
-  <div>
-    <DischiContent v-for="(item,index) in cardList" :key="index" :img="item.poster" :name="item.author" :type="item.genre" :album="item.title" :age="item.year"/>
+  <search-bar @search="setSearchText"/>
+  <div class="row">
+    <DischiContent v-for="(item,index) in cardList" :key="index" class="col-6 col-md-4 col-lg-3 mb-3" :img="item.poster" :name="item.author" :type="item.genre" :album="item.title" :age="item.year"/>
  </div>
 </div>
  </main>
@@ -10,15 +11,29 @@
 <script>
 import axios from 'axios';
 import DischiContent from './DischiContent.vue';
+import SearchBar from './SearchBar.vue';
 export default {
  name:'MainContent',
   components: {
-    DischiContent
+    DischiContent,
+    SearchBar
   },
  data(){
     return{
         cardList:[],
       apiPath:'https://flynn.boolean.careers/exercises/api/array/music'
+    }
+  },
+  methods:{
+    setSearchText(txt){
+      this.SearchText = txt;
+    }
+  },
+  computed:{
+    filteredList(){
+      if(this.searchText === ''){
+        return this.characterList.filter((el)=>el.name.toLowercase().includes(this.searchText.toLowercase()))
+      }
     }
   },
   created(){
