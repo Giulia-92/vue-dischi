@@ -31,4 +31,7 @@ export default {
   border-radius:10px;
   font-family:'Roboto Condensed',;
 }
+p{
+  color:grey;
+}
 </style>
