@@ -1,7 +1,9 @@
 <template>
 <main>
 <div class="container">
- <DischiContent v-for="(item,index) in cardList" :key="index" :img="item.poster" :name="item.author" :type="item.genre" :album="item.title" :age="item.year"/>
+  <div>
+    <DischiContent v-for="(item,index) in cardList" :key="index" :img="item.poster" :name="item.author" :type="item.genre" :album="item.title" :age="item.year"/>
+ </div>
 </div>
  </main>
 </template>
@@ -41,4 +43,5 @@ main{
  color: white;
  font-family: Arial, Helvetica, sans-serif;
 }
+
 </style>
