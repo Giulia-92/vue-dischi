@@ -16,9 +16,9 @@ export default {
   props:{
       name:String,
       type:String,
-      img:Object,
+      img:String,
       album:String,
-      age:Number
+      age:String
      
   }
 }

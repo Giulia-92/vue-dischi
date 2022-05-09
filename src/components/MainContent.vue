@@ -1,7 +1,7 @@
 <template>
 <main>
 <div class="container">
-  <search-bar @search="setSearchText"/>
+  
   <div class="row">
     <DischiContent v-for="(item,index) in cardList" :key="index" class="col-6 col-md-4 col-lg-3 mb-3" :img="item.poster" :name="item.author" :type="item.genre" :album="item.title" :age="item.year"/>
  </div>
@@ -11,12 +11,12 @@
 <script>
 import axios from 'axios';
 import DischiContent from './DischiContent.vue';
-import SearchBar from './SearchBar.vue';
+
 export default {
  name:'MainContent',
   components: {
     DischiContent,
-    SearchBar
+   
   },
  data(){
     return{

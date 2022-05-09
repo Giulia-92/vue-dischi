@@ -9,7 +9,20 @@
 
 </template>
 <script>
-
+export default {
+   name:'HeaderContent',
+   data(){
+       return{
+           inputText:'',
+       }
+   },
+   methods:{
+       reset(){
+           this.inputText='';
+           this.$emit('search',this.inputText)
+       }
+   }, 
+}
 </script>
 <style scoped>
 header{
